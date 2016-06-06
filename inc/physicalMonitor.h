@@ -9,7 +9,7 @@ class PhysicalMonitor{
 public:
 	void print();
 	void setBrightness( int brightness );
-
+	void setPower( bool bPowerOn );
 private:
 	PhysicalMonitor( LPPHYSICAL_MONITOR pPhysicalMonitor );
 	~PhysicalMonitor();

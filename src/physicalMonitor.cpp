@@ -70,3 +70,8 @@ void PhysicalMonitor::print(){
 void PhysicalMonitor::setBrightness( int brightness ){
 	SetMonitorBrightness( m_pPhysicalMonitor->hPhysicalMonitor, brightness );
 }
+
+void PhysicalMonitor::setPower( bool bPowerOn ){
+	BYTE vcpCode = 0xD6;
+	BOOL bSuccess = SetVCPFeature( m_pPhysicalMonitor->hPhysicalMonitor, vcpCode, bPowerOn?0x01:0x04 );
+}
